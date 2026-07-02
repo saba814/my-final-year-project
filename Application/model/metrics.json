@@ -1,0 +1,106 @@
+{
+    "accuracy":  0.6885245901639344,
+    "classification_report_text":  "              precision    recall  f1-score   support\n\n    Low Risk       0.86      0.91      0.88        33\n Medium Risk       0.52      0.61      0.56        18\n   High Risk       0.20      0.10      0.13        10\n\n    accuracy                           0.69        61\n   macro avg       0.53      0.54      0.53        61\nweighted avg       0.65      0.69      0.67        61\n",
+    "classification_report":  {
+                                  "Low Risk":  {
+                                                   "precision":  0.8571428571428571,
+                                                   "recall":  0.9090909090909091,
+                                                   "f1-score":  0.8823529411764706,
+                                                   "support":  33.0
+                                               },
+                                  "Medium Risk":  {
+                                                      "precision":  0.5238095238095238,
+                                                      "recall":  0.6111111111111112,
+                                                      "f1-score":  0.5641025641025641,
+                                                      "support":  18.0
+                                                  },
+                                  "High Risk":  {
+                                                    "precision":  0.2,
+                                                    "recall":  0.1,
+                                                    "f1-score":  0.13333333333333333,
+                                                    "support":  10.0
+                                                },
+                                  "accuracy":  0.6885245901639344,
+                                  "macro avg":  {
+                                                    "precision":  0.526984126984127,
+                                                    "recall":  0.5400673400673401,
+                                                    "f1-score":  0.526596279537456,
+                                                    "support":  61.0
+                                                },
+                                  "weighted avg":  {
+                                                       "precision":  0.6510538641686183,
+                                                       "recall":  0.6885245901639344,
+                                                       "f1-score":  0.6656528941967708,
+                                                       "support":  61.0
+                                                   }
+                              },
+    "confusion_matrix":  [
+                             [
+                                 30,
+                                 2,
+                                 1
+                             ],
+                             [
+                                 4,
+                                 11,
+                                 3
+                             ],
+                             [
+                                 1,
+                                 8,
+                                 1
+                             ]
+                         ],
+    "model_type":  "TensorFlow/Keras Feedforward ANN",
+    "dropout":  [
+                    0.3,
+                    0.2
+                ],
+    "regularization":  "L2 kernel regularization, lambda=0.001",
+    "epochs_trained":  39,
+    "selected_model":  "ANN",
+    "comparison":  [
+                       {
+                           "model":  "ANN",
+                           "model_type":  "TensorFlow/Keras Feedforward ANN",
+                           "accuracy":  0.6885245901639344
+                       },
+                       {
+                           "model":  "Logistic Regression",
+                           "model_type":  "Logistic Regression baseline",
+                           "accuracy":  0.6557377049180327
+                       },
+                       {
+                           "model":  "Random Forest",
+                           "model_type":  "Random Forest comparison model",
+                           "accuracy":  0.7049180327868853
+                       }
+                   ],
+    "tensorflow_available":  true,
+    "test_size":  0.2,
+    "random_state":  42,
+    "features":  [
+                     "age",
+                     "sex",
+                     "cp",
+                     "trestbps",
+                     "chol",
+                     "fbs",
+                     "restecg",
+                     "thalach",
+                     "exang",
+                     "oldpeak",
+                     "slope",
+                     "ca",
+                     "thal"
+                 ],
+    "risk_labels":  {
+                        "0":  "Low Risk",
+                        "1":  "Medium Risk",
+                        "2":  "High Risk"
+                    },
+    "training_note":  "TensorFlow/Keras ANN with Dropout and L2 regularization was trained once. Logistic Regression and Random Forest are comparison models only; the Streamlit app loads the saved ANN artifact for prediction.",
+    "artifact_type":  "keras",
+    "model_file":  "model/heart_disease_ann.keras",
+    "preprocessor_file":  "model/preprocessor.joblib"
+}
